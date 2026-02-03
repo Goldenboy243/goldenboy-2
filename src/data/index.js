@@ -11,7 +11,7 @@ import { FiMail } from "@react-icons/all-files/fi/FiMail";
 import { FiCoffee } from "@react-icons/all-files/fi/FiCoffee";
 
 // Files
-import NathanKindaCV from "../files/Curriculum Vitae_.pdf";
+import NathanKindaCV from "../files/Kinda's CV.pdf";
 
 const bioDescription = ``;
 
