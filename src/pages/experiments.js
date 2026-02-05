@@ -18,7 +18,7 @@ const experiments = [
     id: 1,
     title: "iDeal Marketplace",
     description: "Campus-verified marketplace for students. Features Firebase authentication, email verification, admin dashboard, and a 72-hour auto-verification system.",
-    image: "/images/experiments/ideal-marketplace.png",
+    image: "/images/experiments/iDeal-marketplace.png",
     tag: "Full Stack",
     tech: ["Next.js", "React", "Firebase", "Firestore", "Tailwind", "Vercel"],
     link: "https://i-deal-marketplace.vercel.app",
