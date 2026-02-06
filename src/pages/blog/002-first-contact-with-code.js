@@ -1,45 +1,14 @@
 import * as React from "react";
-
-// Components
-import Header from "../../components/Header";
-import Note from "../../components/Note";
-import Loader from "../../components/Loader";
-import Cursor from "../../components/Cursor";
-
-// Styles
-import "../../styles/global.scss";
+import BlogLayout from "../../components/BlogLayout";
 
 const Post = () => {
-  const [isOpened, setIsOpened] = React.useState(true);
-  React.useEffect(() => {
-    setTimeout(() => {
-      setIsOpened(false);
-    }, 800);
-  }, []);
-
   return (
-    <>
-      <Cursor />
-      <div className="post">
-        <Loader isOpened={isOpened} duration={0.5} />
-        <Header goBackToHome={true} disableScramble={true} />
-        <main className="flex flex-col mb-10 max-w-[900px]">
-          <article className="blog-intro">
-            <header className="px-[5%] mb-4">
-              <p className="mb-3 text-[80px]">💻</p>
-              <h3 className="about-title text-[35px] md:text-[50px] mb-5 font-black w-full leading-[60px] md:mt-0">
-                001. First Syntax
-              </h3>
-              <time
-                dateTime="2023-01-01"
-                className="text-[18px] text-[var(--tw-text-gray-secondary)]"
-              >
-                2023
-              </time>
-            </header>
-            <br />
-            <br />
-            <div className="text-[var(--color-total)] max-w-full w-full mb-16 px-[5%] leading-[50px] text-[26px]">
+    <BlogLayout 
+      id="001" 
+      emoji="💻" 
+      title="First Syntax" 
+      date="2023-01-20"
+    >
               <section className="tldr text-[25px] leading-[45px]">
                 <p className="mb-4">
                   <strong>TL;DR</strong>
@@ -80,21 +49,7 @@ const Post = () => {
                 <br />
                 <p>Hope you comeback.</p>
               </section>
-            </div>
-            <br />
-            <br />
-
-            <a href={"/blog/"} className="px-[5%] text-[16px]">
-              {"<- "} Back to blog
-            </a>
-            <br />
-            <br />
-            <br />
-          </article>
-        </main>
-        <Note />
-      </div>
-    </>
+    </BlogLayout>
   );
 };
 

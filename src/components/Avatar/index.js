@@ -36,7 +36,6 @@ const Avatar = forwardRef(({ theme }, ref) => {
   const surprisedIndexRef = useRef(null);
   const surprisedValueRef = useRef(0);
   const surprisedTargetRef = useRef(0);
-  const blinkIntervalRef = useRef(null);
 
   const [surprisedTarget, setSurprisedTarget] = useState(0);
 
@@ -283,87 +282,10 @@ const Avatar = forwardRef(({ theme }, ref) => {
           }
         });
 
-        // BLINK IMPLEMENTATION: Check for bones first, then create visual overlay if needed
-        const eyelidBones = [];
-        const eyeBones = [];
+        // NOTE: avatar-6.glb has no morph targets (blend shapes) and no eye/eyelid bones.
+        // To enable blinking, re-export from Avaturn with "ARKit blend shapes" enabled,
+        // which adds eyeBlinkLeft/eyeBlinkRight morph targets.
         
-        model.traverse((node) => {
-          if (node.isBone) {
-            const nameLower = node.name.toLowerCase();
-            if (nameLower.includes("eyelid") || nameLower.includes("lid")) {
-              eyelidBones.push(node);
-            } else if (nameLower.includes("eye")) {
-              eyeBones.push(node);
-            }
-          }
-        });
-        
-        // Create visual blink overlay using a shader/material approach on the face mesh
-        let faceMesh = null;
-        model.traverse((node) => {
-          if (node.isMesh && node.name === "avaturn_look_0") {
-            faceMesh = node;
-          }
-        });
-        
-        function blink() {
-          if (eyelidBones.length > 0) {
-            // Animate eyelid bones
-            eyelidBones.forEach((bone) => {
-              const originalRotation = bone.rotation.x;
-              gsap.to(bone.rotation, {
-                x: originalRotation + Math.PI / 4,
-                duration: 0.08,
-                ease: "power2.in",
-                onComplete: () => {
-                  gsap.to(bone.rotation, {
-                    x: originalRotation,
-                    duration: 0.12,
-                    ease: "power2.out"
-                  });
-                }
-              });
-            });
-          } else if (eyeBones.length > 0) {
-            // Try to animate eye bones
-            eyeBones.forEach((bone) => {
-              gsap.to(bone.scale, {
-                y: 0.1,
-                duration: 0.08,
-                ease: "power2.in",
-                onComplete: () => {
-                  gsap.to(bone.scale, {
-                    y: 1,
-                    duration: 0.12,
-                    ease: "power2.out"
-                  });
-                }
-              });
-            });
-          } else if (faceMesh) {
-            // Fallback: Quick opacity flash on face to simulate blink
-            const originalOpacity = faceMesh.material.opacity !== undefined ? faceMesh.material.opacity : 1;
-            if (!faceMesh.material.transparent) {
-              faceMesh.material.transparent = true;
-            }
-            gsap.to(faceMesh.material, {
-              opacity: 0.7,
-              duration: 0.08,
-              ease: "power2.in",
-              onComplete: () => {
-                gsap.to(faceMesh.material, {
-                  opacity: originalOpacity,
-                  duration: 0.12,
-                  ease: "power2.out"
-                });
-              }
-            });
-          } else {
-            // No animation method available for blink
-          }
-        }
-        
-        blinkIntervalRef.current = setInterval(blink, 3000);
         focusOnHead(model);
       },
       undefined,
@@ -471,10 +393,6 @@ const Avatar = forwardRef(({ theme }, ref) => {
         mountRef.current.removeEventListener("mousemove", handleMouseMove);
         mountRef.current.removeEventListener("touchmove", handleTouchMove);
         mountRef.current.removeChild(renderer.domElement);
-      }
-      if (blinkIntervalRef.current) {
-        clearInterval(blinkIntervalRef.current);
-        blinkIntervalRef.current = null;
       }
       renderer.dispose();
     };

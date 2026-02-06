@@ -1,42 +1,14 @@
 import * as React from "react";
-
-// Components
-import Header from "../../components/Header";
-import Note from "../../components/Note";
-import Loader from "../../components/Loader";
-import Cursor from "../../components/Cursor";
-
-// Styles
-import "../../styles/global.scss";
+import BlogLayout from "../../components/BlogLayout";
 
 const Post = () => {
-  const [isOpened, setIsOpened] = React.useState(true);
-  React.useEffect(() => {
-    setTimeout(() => {
-      setIsOpened(false);
-    }, 800);
-  }, []);
-
   return (
-    <>
-      <Cursor />
-      <div className="post">
-        <Loader isOpened={isOpened} duration={0.5} />
-        <Header goBackToHome={true} disableScramble={true} />
-        <main className="flex flex-col mb-10 max-w-[900px]">
-          <article className="blog-intro">
-            <header className="px-[5%] mb-4">
-              <p className="mb-3 text-[80px]">📍</p>
-              <h3 className="about-title text-[35px] md:text-[50px] mb-4 font-black w-full md:mt-0 leading-[60px]">
-                000. Origin
-              </h3>
-              <time dateTime="2020-01-01" className="text-[18px] text-[#bbb]">
-                 2020
-              </time>
-            </header>
-            <br />
-            <br />
-            <div className="text-[var(--color-total)] max-w-full w-full mb-16 px-[5%] leading-[50px] text-[26px]">
+    <BlogLayout 
+      id="000" 
+      emoji="📍" 
+      title="Origin" 
+      date="2020-01-15"
+    >
               <section className="intro-text">
                 <h4 className="text-[31px] font-bold mb-4">The Crossroads of Medicine and Independence</h4>
                 <p>
@@ -82,21 +54,7 @@ const Post = () => {
                   This is 000. The beginning of the log.
                 </p>
               </section>
-            </div>
-            <br />
-            <br />
-
-            <a href={"/blog/"} className="px-[5%] text-[16px]">
-              {"<- "} Back to blog
-            </a>
-            <br />
-            <br />
-            <br />
-          </article>
-        </main>
-        <Note />
-      </div>
-    </>
+    </BlogLayout>
   );
 };
 
