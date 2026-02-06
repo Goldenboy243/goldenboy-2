@@ -131,6 +131,35 @@
     color: var(--tw-text-gray-primary);
     font-weight: 500;
   }
+
+  // Responsive blog post content
+  .blog-intro {
+    header p[class*="text-[80px]"] {
+      font-size: 50px;
+      @media (min-width: 730px) {
+        font-size: 80px;
+      }
+    }
+
+    // Body text responsive sizing
+    & > header + br + br + div {
+      font-size: 18px;
+      line-height: 36px;
+
+      @media (min-width: 730px) {
+        font-size: 26px;
+        line-height: 50px;
+      }
+    }
+
+    // Title line-height
+    h3[class*="leading-[60px]"] {
+      line-height: 40px;
+      @media (min-width: 730px) {
+        line-height: 60px;
+      }
+    }
+  }
 }
 
 .blog-ticker {

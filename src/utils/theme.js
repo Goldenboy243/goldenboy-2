@@ -56,6 +56,7 @@ const addTransitionStyles = () => {
 };
 
 export const setTheme = (themeName) => {
+  if (typeof window === "undefined") return;
   const theme = themes[themeName];
   if (!theme) return;
 
@@ -73,6 +74,7 @@ export const setTheme = (themeName) => {
 };
 
 export const getTheme = () => {
+  if (typeof window === "undefined") return "dark";
   return localStorage.getItem("theme") || "dark";
 };
 

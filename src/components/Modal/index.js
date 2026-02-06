@@ -169,7 +169,7 @@ const Modal = () => {
                       "-active": cursor === index,
                     })}
                   >
-                    <a href={target} className="description" target="_blank">
+                    <a href={target} className="description" target="_blank" rel="noopener noreferrer">
                       {icon}
                       <p>{text}</p>
                     </a>

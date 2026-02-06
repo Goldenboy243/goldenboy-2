@@ -81,7 +81,7 @@ const panelMap = (index) => {
               <h5 className="infos">{details}</h5>
               <p className="description">{description}</p>
               {link && (
-                <a href={link} target="_blank" className="link">
+                <a href={link} target="_blank" rel="noopener noreferrer" className="link">
                   {link}
                 </a>
               )}
@@ -114,7 +114,7 @@ const panelMap = (index) => {
               <h5 className="infos">{details}</h5>
               <p className="description">{description}</p>
               {link && (
-                <a href={link} target="_blank" className="link">
+                <a href={link} target="_blank" rel="noopener noreferrer" className="link">
                   {link}
                 </a>
               )}

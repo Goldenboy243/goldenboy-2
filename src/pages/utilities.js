@@ -39,6 +39,7 @@ const Actions = () => {
                   href={NathanKindaCV}
                   download={true}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <ScrambleText
                     text="Download CV"
@@ -52,6 +53,7 @@ const Actions = () => {
                 <a
                   href="https://linkedin.com"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-[var(--tw-text-gray-primary)]"
                 >
                   <ScrambleText
@@ -87,6 +89,7 @@ const Actions = () => {
                 <a
                   href="https://github.com/Goldenboy243"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-[var(--tw-text-gray-primary)]"
                 >
                   <ScrambleText
@@ -143,6 +146,7 @@ const Actions = () => {
                 <a
                   href="https://instagram.com"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-[var(--tw-text-gray-primary)]"
                 >
                   <ScrambleText

@@ -41,23 +41,23 @@ const IndexPage = () => {
             <Avatar theme={theme} />
           </div>
           <div className="w-[90svw] banner-holder z-50 pt-[100px] sm:pointer-events-none fixed flex justify-center items-center">
-            <h1 className="banner-title flex text-[var(--tw-text-gray-primary)] flex-col items-end h-full text-right font-bold w-[300px] flex-shrink-0">
+            <h1 className="banner-title flex text-[var(--tw-text-gray-primary)] flex-col items-end h-full text-right font-bold w-full max-w-[300px] flex-shrink-0">
               <ScrambleText
                 text="Nathan"
-                className="scramble-text min-w-[400px]"
+                className="scramble-text w-full"
                 duration={3}
                 placeholder="."
               />
 
               <ScrambleText
                 text="Kinda"
-                className="scramble-text min-w-[400px]"
+                className="scramble-text w-full"
                 duration={3}
                 placeholder="."
               />
             </h1>
-            <span className="w-[420px]"> </span>
-            <div className="banner-description w-[350px] mt-[0px] text-left 2xl:mt-[-30px] flex justify-end flex-col pl-[80px] items-start">
+            <span className="hidden lg:block w-[420px]"> </span>
+            <div className="banner-description w-full max-w-[350px] mt-[0px] text-left 2xl:mt-[-30px] flex justify-end flex-col pl-0 lg:pl-[80px] items-start">
               <p className="mb-4 sm:mb-7">
                 A{" "}
                 <strong className="text-[var(--tw-text-gray-primary)] font-bold">

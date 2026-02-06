@@ -59,11 +59,11 @@ const Avatar = forwardRef(({ theme }, ref) => {
     if (window.innerWidth <= 1368) {
       return baseScaleRef.current * 0.6;
     }
-    if (window.innerWidth >= 1920) {
-      return baseScaleRef.current * 0.9;
-    }
     if (window.innerWidth >= 2560) {
       return baseScaleRef.current * 0.7;
+    }
+    if (window.innerWidth >= 1920) {
+      return baseScaleRef.current * 0.9;
     }
     return baseScaleRef.current;
   };
@@ -284,7 +284,6 @@ const Avatar = forwardRef(({ theme }, ref) => {
         });
 
         // BLINK IMPLEMENTATION: Check for bones first, then create visual overlay if needed
-        console.log("=== Avatar Blink Setup ===");
         const eyelidBones = [];
         const eyeBones = [];
         
@@ -292,30 +291,18 @@ const Avatar = forwardRef(({ theme }, ref) => {
           if (node.isBone) {
             const nameLower = node.name.toLowerCase();
             if (nameLower.includes("eyelid") || nameLower.includes("lid")) {
-              console.log(`  ✓ Found eyelid bone: "${node.name}"`);
               eyelidBones.push(node);
             } else if (nameLower.includes("eye")) {
-              console.log(`  ✓ Found eye bone: "${node.name}"`);
               eyeBones.push(node);
             }
           }
         });
-        
-        if (eyelidBones.length === 0 && eyeBones.length === 0) {
-          console.warn("⚠️ No eyelid or eye bones found. Logging all bones:");
-          model.traverse((node) => {
-            if (node.isBone) {
-              console.log(`  - Bone: "${node.name}"`);
-            }
-          });
-        }
         
         // Create visual blink overlay using a shader/material approach on the face mesh
         let faceMesh = null;
         model.traverse((node) => {
           if (node.isMesh && node.name === "avaturn_look_0") {
             faceMesh = node;
-            console.log("✓ Found face mesh for blink overlay");
           }
         });
         
@@ -372,13 +359,11 @@ const Avatar = forwardRef(({ theme }, ref) => {
               }
             });
           } else {
-            console.log("👁️ Blink triggered but no animation method available");
+            // No animation method available for blink
           }
         }
         
-        console.log("✓ Setting up blink interval (every 3 seconds)...");
         blinkIntervalRef.current = setInterval(blink, 3000);
-        console.log("=== End Avatar Blink Setup ===");
         focusOnHead(model);
       },
       undefined,

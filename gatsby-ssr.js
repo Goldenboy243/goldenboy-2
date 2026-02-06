@@ -7,8 +7,8 @@ export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
     // Meta description
     <meta
       key="description"
-      name="Nathan's Portfolio"
-      content="Nathan, a software engineer creating cool digital experiences and sharing knowledge about web development, design and technology."
+      name="description"
+      content="Nathan Kinda - Software Engineer. Creating digital experiences and sharing knowledge about web development, design and technology."
     />,
     
     // Google APIs/SDKs

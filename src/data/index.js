@@ -49,7 +49,7 @@ const academyPath = [
     details: ``,
   },
   {
-    rrole: "",
+    role: "",
     details: ``,
   },
   {

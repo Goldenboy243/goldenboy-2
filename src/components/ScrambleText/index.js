@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import PropTypes from "prop-types";
 
 const ScrambleText = ({ text, className, delay = 0, duration = 1, placeholder = "." }) => {
   const textRef = useRef(null);
+  const animationRef = useRef(null);
   const chars = placeholder;
 
   const scramble = (element, originalText) => {
@@ -34,7 +34,7 @@ const ScrambleText = ({ text, className, delay = 0, duration = 1, placeholder = 
       }
 
       frame++;
-      requestAnimationFrame(animate);
+      animationRef.current = requestAnimationFrame(animate);
     };
 
     animate();
@@ -53,6 +53,9 @@ const ScrambleText = ({ text, className, delay = 0, duration = 1, placeholder = 
 
     return () => {
       clearTimeout(timeout);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
     };
   }, [text, delay, duration]);
 
