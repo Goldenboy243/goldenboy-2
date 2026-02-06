@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 import Shortcut from "../components/Shortcut";
 import Loader from "../components/Loader";
 import Cursor from "../components/Cursor";
-import SplitTextAnimation from "../components/SplitText";
 
 // Styles
 import "../styles/global.scss";

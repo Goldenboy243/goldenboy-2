@@ -31,7 +31,7 @@ const Post = () => {
                 Go for it anyway
               </h3>
               <time
-                datetime="2015-03-03"
+                dateTime="2015-03-03"
                 className="text-[18px] text-[var(--tw-text-gray-secondary)]"
               >
                 2015 this was written by a friend I liked it ! (didn't want to be mentioned )

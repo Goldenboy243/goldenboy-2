@@ -71,6 +71,12 @@ const Modal = () => {
     } else {
       Mousetrap.unbind(["down", "up", "enter"]);
     }
+
+    return () => {
+      Mousetrap.unbind(["command+enter", "ctrl+enter"]);
+      Mousetrap.unbind("esc");
+      Mousetrap.unbind(["down", "up", "enter"]);
+    };
   }, [modalIsOpened, cursor, list]);
 
   const onSearch = (e) => {

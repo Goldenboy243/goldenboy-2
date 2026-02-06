@@ -14,6 +14,7 @@ import "./index.scss";
 
 const Headshot = () => {
   const { theme } = React.useContext(State);
+  const animFrameIdRef = React.useRef(null);
   const initWaves = () => {
     // var capturer = new CCapture({ format: "webm" });
 
@@ -401,30 +402,29 @@ const Headshot = () => {
       // }
 
       // Call tick again on the next frame
-      window.requestAnimationFrame(tick);
+      animFrameIdRef.current = window.requestAnimationFrame(tick);
     };
 
     tick();
 
-    // window.addEventListener("keydown", ({ code }) => {
-    //   console.log(code);
-
-    //   if (code === "Space") {
-    //     capturer.start();
-    //     canRecord = true;
-
-    //     setTimeout(() => {
-    //       capturer.stop();
-    //       capturer.save();
-
-    //       canRecord = false;
-    //     }, 20000);
-    //   }
-    // });
+    return { renderer, geometry, geometry2, shaderMaterial, texture };
   };
 
   React.useEffect(() => {
-    initWaves();
+    const resources = initWaves();
+
+    return () => {
+      if (animFrameIdRef.current) {
+        cancelAnimationFrame(animFrameIdRef.current);
+      }
+      if (resources) {
+        if (resources.renderer) resources.renderer.dispose();
+        if (resources.geometry) resources.geometry.dispose();
+        if (resources.geometry2) resources.geometry2.dispose();
+        if (resources.shaderMaterial) resources.shaderMaterial.dispose();
+        if (resources.texture) resources.texture.dispose();
+      }
+    };
   }, []);
 
   return <canvas className="webgl cursor-grab"></canvas>;

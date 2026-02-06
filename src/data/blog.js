@@ -1,5 +1,19 @@
 export const articles = [
   {
+    year: 2020,
+    posts: [
+      {
+        id: "000",
+        emoji: "📍",
+        title: "Origin",
+        description: "The Crossroads of Medicine, Tech and Independence. What now?",
+        readTime: "3 min read",
+        link: "/blog/001-starting",
+        active: true,
+      },
+    ],
+  },
+  {
     year: 2023,
     posts: [
       {
@@ -82,19 +96,5 @@ export const articles = [
       },
     ]
   },
-  {
-    year: 2020,
-    posts: [
-      {
-        id: "000",
-        emoji: "📍",
-        title: "Origin",
-        description: "The Crossroads of Medicine, Tech and Independence. What now?",
-        readTime: "3 min read",
-        link: "/blog/001-starting",
-        active: true,
-      },
-    ],
-  }
 ]
  

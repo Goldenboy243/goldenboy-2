@@ -219,6 +219,7 @@ const About = () => {
               ].map(({ title, isBlocked }, index) => {
                 return (
                   <button
+                    key={index}
                     className={classNames("-toggle", {
                       "--active font-bold": activePanel === index,
                       "-button-blocked": isBlocked,

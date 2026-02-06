@@ -36,7 +36,7 @@ const Post = () => {
                 004. The analogy of the tower of Hanoi to programming
               </h3>
               <time
-                datetime="2015-06-10"
+                dateTime="2015-06-10"
                 className="text-[18px] text-[var(--tw-text-gray-secondary)]"
               >
                 2023

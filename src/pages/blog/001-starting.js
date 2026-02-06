@@ -26,11 +26,11 @@ const Post = () => {
         <main className="flex flex-col mb-10 max-w-[900px]">
           <article className="blog-intro">
             <header className="px-[5%] mb-4">
-              <p className="mb-3 text-[80px]">�</p>
+              <p className="mb-3 text-[80px]">📍</p>
               <h3 className="about-title text-[35px] md:text-[50px] mb-4 font-black w-full md:mt-0 leading-[60px]">
                 000. Origin
               </h3>
-              <time datetime="2020-01-01" className="text-[18px] text-[#bbb]">
+              <time dateTime="2020-01-01" className="text-[18px] text-[#bbb]">
                  2020
               </time>
             </header>

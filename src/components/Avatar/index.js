@@ -373,8 +373,9 @@ const Avatar = forwardRef(({ theme }, ref) => {
       }
     );
     const idleStartTime = Date.now();
+    let animFrameId;
     const animate = () => {
-      requestAnimationFrame(animate);
+      animFrameId = requestAnimationFrame(animate);
       if (controlsRef.current) {
         controlsRef.current.update();
       }
@@ -464,6 +465,7 @@ const Avatar = forwardRef(({ theme }, ref) => {
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
+      cancelAnimationFrame(animFrameId);
       window.removeEventListener("resize", handleResize);
       if (mountRef.current) {
         mountRef.current.removeEventListener("mousemove", handleMouseMove);
@@ -500,7 +502,7 @@ const Avatar = forwardRef(({ theme }, ref) => {
         }
       }
     });
-  }, [theme, modelRef.current]);
+  }, [theme]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Listen for hover events on all <a> elements
   useEffect(() => {
