@@ -26,6 +26,16 @@ const experiments = [
   },
   {
     id: 2,
+    title: "Safari.cd",
+    description: "Real estate platform for the Democratic Republic of Congo. Verified property listings, anti-scam protection, student housing, and direct owner-to-buyer connections across 15+ cities.",
+    image: "/images/experiments/safaricd.png",
+    tag: "Full Stack",
+    tech: ["Next.js", "React", "Tailwind", "Vercel"],
+    link: "https://safaricd.vercel.app",
+    github: "https://github.com/Goldenboy243",
+  },
+  {
+    id: 3,
     title: "Portfolio Website",
     description: "A modern, animated portfolio built with Gatsby, GSAP, and Three.js. Features a 3D avatar, smooth page transitions, and interactive elements.",
     image: "/images/experiments/portfolio.png",
