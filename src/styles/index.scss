@@ -23,8 +23,8 @@
   padding-bottom: 30svh;
   pointer-events: none;
 
-  // Allow clicks on interactive children
-  a, button, .shortcut, [onclick], span[class*="cursor"] {
+  // Allow clicks on interactive children and all their descendants
+  a, button, .shortcut, .shortcut *, [onclick], span[class*="cursor"] {
     pointer-events: auto;
   }
 

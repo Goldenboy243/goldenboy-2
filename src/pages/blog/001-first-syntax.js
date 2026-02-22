@@ -25,34 +25,42 @@ const Post = () => {
         <section className="tldr text-[18px] md:text-[25px] leading-[32px] md:leading-[45px]">
           <h4 className="text-[24px] md:text-[31px] font-bold mb-4">TL;DR</h4>
           <ul className="list-none pl-8">
-            <li className="mb-4">
-              <strong>The Expectation:</strong> I came for Python; I got Visual Basic.
-            </li>
-            <li className="mb-4">
-              <strong>The Tools:</strong> Installing an IDE (Integrated Development Environment) called Visual Studio.
-            </li>
-            <li className="mb-4">
-              <strong>The Reality:</strong> Writing a formal letter to the computer just to say "Hello World."
-            </li>
+            <li className="mb-4"><strong>The Language:</strong> Python, Java, C++... nah, we're starting with VB. Says the college.</li>
+            <li className="mb-4"><strong>The Tool:</strong> Visual Studio—drag, drop, easy. Until you write the code.</li>
+            <li className="mb-4"><strong>The Syntax:</strong> All that just to say "Hello World"?</li>
           </ul>
           <br />
           <br />
         </section>
 
         <section className="intro-text">
-          <h4 className="text-[24px] md:text-[31px] font-bold mb-4">Day One in IT</h4>
+          <h4 className="text-[24px] md:text-[31px] font-bold mb-4">Day One. For Real This Time.</h4>
           <p>
-            Today is my first actual day in IT. I'm finally here to see what programming really is and what tools we use. Before this, Python was the only language I'd even heard of, but the college decided otherwise—apparently, the first year belongs to VB.
+            Today is officially my first day of learning how to code. I'm finally here to see how "programming" actually looks like and what tools are used. So turns out there are different programming languages—Python, Java, C, C++... you can pick any of those. But nah, we're starting with VB.
           </p>
           <br />
           <p>
-            What even is VB? It's a programming language, sure, but the setup feels like a lot. To code, you need an IDE (Integrated Development Environment). For us, that means Visual Studio. I'm a bit lost because there are so many things to remember and understand before you even write a single line, but it seems easy enough, so let's start with the basics: declaring a variable.
+            Says the college.
           </p>
           <br />
 
-          <h4 className="text-[24px] md:text-[32px] font-bold mb-4 mt-8">The Paperwork Language</h4>
+          <h4 className="text-[24px] md:text-[32px] font-bold mb-4 mt-8">What Even Is VB?</h4>
           <p>
-            Programming is just telling the computer what to do, but in VB, the conversation feels a bit too formal. The syntax looks like this:
+            Before I could even write a line of code, I had to install something called a code editor. We're using Visual Studio, and honestly? It kinda looks easy to use. You just choose the tools you want—a text box, a button, a radio button—drag them onto the form, and arrange them however you like. You can even modify the properties of each element. Font size, color, position... easy, right?
+          </p>
+          <br />
+          <p>
+            Now it's time to make it actually <em>work</em>. Time to write the code.
+          </p>
+          <br />
+          <p>
+            Eish. This is when it gets complicated.
+          </p>
+          <br />
+
+          <h4 className="text-[24px] md:text-[32px] font-bold mb-4 mt-8">The Basic Syntax</h4>
+          <p>
+            Writing code is just telling the computer what to do. That's what they say. But in VB, the conversation feels a bit... formal. Look at this:
           </p>
           <br />
           <div className="mb-4 rounded-lg overflow-hidden text-[18px] leading-[30px]">
@@ -66,11 +74,11 @@ const Post = () => {
           </div>
           <br />
           <p>
-            It seems a bit complicated just to display a simple message. Why do I need to define a <code className="bg-[var(--bg-secondary)] px-2 py-1 rounded text-[16px] md:text-[22px]">Public Class</code>, a <code className="bg-[var(--bg-secondary)] px-2 py-1 rounded text-[16px] md:text-[22px]">Private Sub</code>, and <code className="bg-[var(--bg-secondary)] px-2 py-1 rounded text-[16px] md:text-[22px]">Dim</code> a variable just for a "Hello World"? I was expecting a high-tech conversation with a machine; instead, it feels like I'm filling out paperwork.
+            Does this not seem complicated just to say "Hi"? I have to define a <code className="bg-[var(--bg-secondary)] px-2 py-1 rounded text-[16px] md:text-[22px]">Public Class</code>, then a <code className="bg-[var(--bg-secondary)] px-2 py-1 rounded text-[16px] md:text-[22px]">Private Sub</code>, and then <code className="bg-[var(--bg-secondary)] px-2 py-1 rounded text-[16px] md:text-[22px]">Dim</code> a variable—whatever that means.
           </p>
           <br />
           <p>
-            I'm trying to keep up, but I can't help but wonder if there's a shorter way to do this. For now, I'm just following the rules and hoping the "why" becomes clear soon.
+            I'm trying to understand the "why" behind all these definitions. Why can't I just say <em>show "Hello World"</em> and call it a day? But for now, I'm just following along and hoping it makes sense soon.
           </p>
           <br />
           <p className="italic text-[16px] md:text-[22px]">
