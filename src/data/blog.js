@@ -34,6 +34,15 @@ export const articles = [
         link: "/blog/002-five-plus-three",
         active: false,
       },
+      {
+        id: "003",
+        emoji: "🗼",
+        title: "The Tower of Hanoi",
+        description: "Three rods, stack of disks, and a function that calls itself. Welcome to recursion.",
+        readTime: "4 min read",
+        link: "/blog/003-the-analogy-of-the-tower-of-hanoi-to-programming",
+        active: false,
+      },
     ],
   },
 ]
