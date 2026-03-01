@@ -27,11 +27,11 @@ export const articles = [
       },
       {
         id: "002",
-        emoji: "🧮",
-        title: "Five Plus Three",
-        description: "Built a calculator. Typed 5 + 3, got 53. First bug, first fix, first dopamine hit.",
-        readTime: "3 min read",
-        link: "/blog/002-five-plus-three",
+        emoji: "�",
+        title: "Introduction to Artificial Intelligence",
+        description: "Will be published soon...",
+        readTime: "— min read",
+        link: "/blog/002-introduction-to-artificial-intelligence",
         active: false,
       },
       {
