@@ -4,6 +4,7 @@ import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 // Components
 import BlogLayout from "../../components/BlogLayout";
+import Seo from "../../components/Seo";
 
 // Styles
 import "../../styles/global.scss";
@@ -32,6 +33,21 @@ int main() {
 const Post = () => {
   return (
     <BlogLayout id="003" emoji="🗼" title="The Tower of Hanoi" date="2023-06-01">
+      <Seo
+        title="003. The Tower of Hanoi"
+        description="Three rods, stack of disks, and a function that calls itself. Welcome to recursion."
+        pathname="/blog/003-the-analogy-of-the-tower-of-hanoi-to-programming"
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: "The Tower of Hanoi",
+          description: "Three rods, stack of disks, and a function that calls itself. Welcome to recursion.",
+          author: { "@type": "Person", name: "Nathan Kinda" },
+          datePublished: "2023-06-01",
+          url: "https://nathankinda.com/blog/003-the-analogy-of-the-tower-of-hanoi-to-programming",
+        }}
+      />
       <div className="text-[var(--color-total)] max-w-full w-full mb-16 px-[5%] leading-[35px] md:leading-[50px] text-[18px] md:text-[26px]">
         <section className="tldr text-[18px] md:text-[25px] leading-[32px] md:leading-[45px]">
           <h4 className="text-[24px] md:text-[31px] font-bold mb-4">TL;DR</h4>
@@ -119,5 +135,3 @@ const Post = () => {
 };
 
 export default Post;
-
-export const Head = () => <title>003. The Tower of Hanoi | Nathan Kinda</title>;

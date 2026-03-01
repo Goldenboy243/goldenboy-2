@@ -17,6 +17,7 @@ import { articles } from "../data/blog";
 import Avatar from "../components/Avatar";
 import { State } from "../components/Layout";
 import ScrambleText from "../components/ScrambleText";
+import Seo from "../components/Seo";
 
 const IndexPage = () => {
   const [isOpened, setIsOpened] = React.useState(true);
@@ -34,6 +35,24 @@ const IndexPage = () => {
 
   return (
     <>
+      <Seo
+        title="Nathan Kinda — Software Engineer"
+        rawTitle
+        description="Software Engineer building digital experiences. Exploring web development, 3D, and creative coding."
+        pathname="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Nathan Kinda",
+          url: "https://nathankinda.com",
+          author: {
+            "@type": "Person",
+            name: "Nathan Kinda",
+            url: "https://nathankinda.com",
+            jobTitle: "Software Engineer",
+          },
+        }}
+      />
       <Cursor />
       <div className="home overflow-hidden">
         <Loader isOpened={isOpened} duration={1} />
@@ -144,5 +163,3 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
-
-export const Head = () => <title>Don't Stop Or Never Start</title>;

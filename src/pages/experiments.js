@@ -7,6 +7,7 @@ import Cursor from "../components/Cursor";
 import ImageCarousel from "../components/ImageCarousel";
 import ScrambleText from "../components/ScrambleText";
 import { State } from "../components/Layout";
+import Seo from "../components/Seo";
 
 // Styles
 import "../styles/global.scss";
@@ -68,6 +69,11 @@ const ExperimentsPage = () => {
 
   return (
     <>
+      <Seo
+        title="Experiments"
+        description="A collection of projects, prototypes, and creative explorations by Nathan Kinda. Full-stack apps, real estate platforms, and more."
+        pathname="/experiments"
+      />
       <Cursor />
       <div className="experiments-page">
         <Loader isOpened={isOpened} duration={1} />
@@ -187,5 +193,3 @@ const ExperimentsPage = () => {
 };
 
 export default ExperimentsPage;
-
-export const Head = () => <title>Experiments | Nathan Kinda</title>;

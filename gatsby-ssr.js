@@ -10,13 +10,6 @@ export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
   setHtmlAttributes({ lang: 'en' })
 
   setHeadComponents([
-    // Meta description
-    <meta
-      key="description"
-      name="description"
-      content="Nathan Kinda - Software Engineer. Creating digital experiences and sharing knowledge about web development, design and technology."
-    />,
-    
     // Google APIs/SDKs
     <link key="google-apis-preconnect" rel="preconnect" href="https://www.google.com.br" />,
     <link key="google-apis-dns-prefetch" rel="dns-prefetch" href="https://www.google.com.br" />,

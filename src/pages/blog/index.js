@@ -8,6 +8,7 @@ import Cursor from "../../components/Cursor";
 
 // Content
 import { articles } from "../../data/blog";
+import Seo from "../../components/Seo";
 
 // Styles
 import "../../styles/global.scss";
@@ -31,6 +32,11 @@ const Blog = () => {
 
   return (
     <>
+      <Seo
+        title="Blog"
+        description="Ideas, opinions, and daydreams. Honest takes on front-end, back-end, algorithms, creative development, and life in tech."
+        pathname="/blog"
+      />
       <Cursor />
       <div className="blog">
         <Loader isOpened={isOpened} duration={0.5} />
@@ -142,5 +148,3 @@ const Blog = () => {
 };
 
 export default Blog;
-
-export const Head = () => <title>Blog | Nathan Kinda</title>;

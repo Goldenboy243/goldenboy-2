@@ -403,7 +403,7 @@ const Avatar = forwardRef(({ theme }, ref) => {
   }, [theme]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className="avatar-container" ref={mountRef}>
+    <div className="avatar-container" ref={mountRef} role="img" aria-label="3D avatar of Nathan Kinda">
       {error ? (
         <div className="error">
           <p>3D model not available</p>

@@ -10,6 +10,8 @@ module.exports = {
     siteUrl: `https://nathankinda.com`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-google-gtag`,

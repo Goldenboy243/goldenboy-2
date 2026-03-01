@@ -2,6 +2,7 @@ import * as React from "react";
 
 // Components
 import BlogLayout from "../../components/BlogLayout";
+import Seo from "../../components/Seo";
 
 // Styles
 import "../../styles/global.scss";
@@ -9,6 +10,21 @@ import "../../styles/global.scss";
 const Post = () => {
   return (
     <BlogLayout id="000" emoji="📍" title="Origin" date="2020-01-01">
+      <Seo
+        title="000. Origin"
+        description="The rejection that changed everything—from medicine to tech."
+        pathname="/blog/000-origin"
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: "Origin",
+          description: "The rejection that changed everything—from medicine to tech.",
+          author: { "@type": "Person", name: "Nathan Kinda" },
+          datePublished: "2020-01-01",
+          url: "https://nathankinda.com/blog/000-origin",
+        }}
+      />
       <div className="text-[var(--color-total)] max-w-full w-full mb-16 px-[5%] leading-[35px] md:leading-[50px] text-[18px] md:text-[26px]">
         <section className="tldr text-[18px] md:text-[25px] leading-[32px] md:leading-[45px]">
           <h4 className="text-[24px] md:text-[31px] font-bold mb-4">TL;DR</h4>
@@ -95,5 +111,3 @@ const Post = () => {
 };
 
 export default Post;
-
-export const Head = () => <title>000. Origin | Nathan Kinda</title>;

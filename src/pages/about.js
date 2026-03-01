@@ -12,6 +12,7 @@ import { FiDownload } from "@react-icons/all-files/fi/FiDownload";
 
 import NathanKindaCV from "../files/Kinda's CV.pdf";
 import { State } from "../components/Layout";
+import Seo from "../components/Seo";
 
 // Data
 import {
@@ -153,6 +154,11 @@ const About = () => {
 
   return (
     <>
+      <Seo
+        title="About"
+        description="Software Developer. Innovator. Problem solver. Learn more about Nathan Kinda's career, education, and open-source contributions."
+        pathname="/about"
+      />
       <Cursor />
 
       <div className="about">
@@ -243,5 +249,3 @@ const About = () => {
 };
 
 export default About;
-
-export const Head = () => <title>Me | Nathan Kinda</title>;
