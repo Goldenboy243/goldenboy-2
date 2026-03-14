@@ -135,7 +135,7 @@ const Post = () => {
           </p>
           <br />
           <p className="italic text-[16px] md:text-[22px]">
-            The logic was finally loading.
+            The logic is finally loading.
           </p>
         </section>
       </div>
