@@ -26,14 +26,14 @@ const Post = () => {
     <BlogLayout id="002" emoji="🤖" title="Introduction to Artificial Intelligence" date="2023-04-01">
       <Seo
         title="002. Introduction to Artificial Intelligence"
-        description="Realizing that the difference between a failing grade and a finished assignment is a well-placed prompt."
+        description="The difference between a failing grade and a finished assignment is a well-placed prompt."
         pathname="/blog/002-introduction-to-artificial-intelligence"
         type="article"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "BlogPosting",
           headline: "Introduction to Artificial Intelligence",
-          description: "Realizing that the difference between a failing grade and a finished assignment is a well-placed prompt.",
+          description: "The difference between a failing grade and a finished assignment is a well-placed prompt.",
           author: { "@type": "Person", name: "Nathan Kinda" },
           datePublished: "2023-04-01",
           url: "https://nathankinda.com/blog/002-introduction-to-artificial-intelligence",
