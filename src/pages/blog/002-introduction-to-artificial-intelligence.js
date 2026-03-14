@@ -52,7 +52,7 @@ const Post = () => {
         </section>
 
         <section className="intro-text">
-          <h4 className="text-[24px] md:text-[31px] font-bold mb-4">The Assignment Was Clear. The Logic Was Not.</h4>
+          <h4 className="text-[24px] md:text-[31px] font-bold mb-6 mt-12 md:mt-14 leading-tight">The Assignment Was Clear. The Logic Was Not.</h4>
           <p>
             The brief was straightforward: build a student registration system and a marks calculator that could think—calculating averages, finding the highest mark, and slotting each student into a result category. On paper, manageable. In practice, it was the most complicated thing I'd been asked to write up to that point.
           </p>
@@ -62,7 +62,7 @@ const Post = () => {
           </p>
           <br />
 
-          <h4 className="text-[24px] md:text-[32px] font-bold mb-4 mt-8">The Logic That Felt Like a Puzzle</h4>
+          <h4 className="text-[24px] md:text-[32px] font-bold mb-6 mt-12 md:mt-14 leading-tight">The Logic That Felt Like a Puzzle</h4>
           <p>
             The part that made the most sense—once I sat with it long enough—was the category function. Three conditions, three outcomes. Clean.
           </p>
@@ -82,7 +82,7 @@ const Post = () => {
           </p>
           <br />
 
-          <h4 className="text-[24px] md:text-[32px] font-bold mb-4 mt-8">The Deadline Was Not Waiting</h4>
+          <h4 className="text-[24px] md:text-[32px] font-bold mb-6 mt-12 md:mt-14 leading-tight">The Deadline Was Not Waiting</h4>
           <p>
             I remember the pressure clearly. The assignment wasn't impossible—it was just that the deadline was breathing down my neck and I didn't have the full picture yet. My notes were there. The concepts were there, somewhere. But connecting them into something that actually ran? That was the gap.
           </p>
@@ -92,7 +92,7 @@ const Post = () => {
           </p>
           <br />
 
-          <h4 className="text-[24px] md:text-[32px] font-bold mb-4 mt-8">The Lifeline</h4>
+          <h4 className="text-[24px] md:text-[32px] font-bold mb-6 mt-12 md:mt-14 leading-tight">The Lifeline</h4>
           <p>
             My first real conversation with ChatGPT wasn't about getting code written for me. It was about understanding how the pieces fit. One of the things I needed to figure out was how to generate a student number—unique, structured, automatic. The solution turned out to be simpler than I expected:
           </p>
