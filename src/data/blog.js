@@ -27,12 +27,12 @@ export const articles = [
       },
       {
         id: "002",
-        emoji: "�",
+        emoji: "🤖",
         title: "Introduction to Artificial Intelligence",
-        description: "Will be published soon...",
-        readTime: "— min read",
+        description: "Realizing that the difference between a failing grade and a finished assignment is a well-placed prompt.",
+        readTime: "4 min read",
         link: "/blog/002-introduction-to-artificial-intelligence",
-        active: false,
+        active: true,
       },
       {
         id: "003",
