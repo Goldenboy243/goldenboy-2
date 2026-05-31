@@ -119,6 +119,11 @@
     pointer-events: auto;
   }
 
+  .header-holder span,
+  .header-holder span * {
+    pointer-events: auto;
+  }
+
   .header-list {
     position: relative;
     z-index: 100;

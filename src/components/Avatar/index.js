@@ -5,6 +5,7 @@ import React, {
   forwardRef,
 } from "react";
 import * as THREE from "three";
+import { withPrefix } from "gatsby";
 import gsap from "gsap";
 
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -250,10 +251,18 @@ const Avatar = forwardRef(({ theme }, ref) => {
     scene.add(cube);
     modelRef.current = cube;
     const loader = new GLTFLoader();
-    const path = "/files/avatar-6.glb";
-    loader.load(
-      path,
-      (gltf) => {
+    const modelPaths = [
+      withPrefix("/files/avatar-6.glb"),
+      withPrefix("/files/avatar.glb"),
+    ];
+    let pathIndex = 0;
+
+    const tryLoad = () => {
+      const path = modelPaths[pathIndex];
+      loader.load(
+        path,
+        (gltf) => {
+          setError(false);
         scene.remove(cube);
         const model = gltf.scene;
         baseScaleRef.current = 2;
@@ -283,14 +292,22 @@ const Avatar = forwardRef(({ theme }, ref) => {
           }
         });
         
-        focusOnHead(model);
-      },
-      undefined,
-      (error) => {
-        console.error("Error loading model:", error);
-        setError(true);
-      }
-    );
+          focusOnHead(model);
+        },
+        undefined,
+        (error) => {
+          if (pathIndex < modelPaths.length - 1) {
+            pathIndex += 1;
+            tryLoad();
+            return;
+          }
+          console.error("Error loading model:", error);
+          setError(true);
+        }
+      );
+    };
+
+    tryLoad();
     const idleStartTime = Date.now();
     let animFrameId;
     const animate = () => {

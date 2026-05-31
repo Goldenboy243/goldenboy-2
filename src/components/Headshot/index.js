@@ -21,7 +21,7 @@ const Headshot = () => {
     const params = {
       exposure: 0.4,
       bloomStrength: 0.4,
-      // bloomThreshold: 0.01,
+      bloomThreshold: 0.01,
       bloomRadius: 1.5,
 
       // exposure: 0.9,
