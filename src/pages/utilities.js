@@ -8,7 +8,7 @@ import Loader from "../components/Loader";
 import Cursor from "../components/Cursor";
 
 // Files
-import NathanKindaCV from "../files/Kinda's CV.pdf";
+import NathanKindaCV from "../files/Kinda_resume .pdf";
 
 // Styles
 import "../styles/global.scss";
@@ -66,7 +66,7 @@ const Actions = () => {
               </li>
               <li>
                 <a
-                  href="mailto:kinda.nathan@icloud.com"
+                  href="mailto:kinda.nathan1@gmail.com"
                   className="hover:text-[var(--tw-text-gray-primary)]"
                 >
                   <ScrambleText
@@ -77,7 +77,7 @@ const Actions = () => {
                   />
                   <span className="inline-block ml-5">
                     <ScrambleText
-                      text="invite to -> kinda.nathan@icloud.com"
+                      text="invite to -> kinda.nathan1@gmail.com"
                       className="scramble-text"
                       duration={1.4}
                       placeholder="__"
@@ -131,7 +131,7 @@ const Actions = () => {
               <li>
                 {" "}
                 <a
-                  href="mailto:kinda.nathan@icloud.com"
+                  href="mailto:kinda.nathan1@gmail.com"
                   className="hover:text-[var(--tw-text-gray-primary)]"
                 >
                   <ScrambleText

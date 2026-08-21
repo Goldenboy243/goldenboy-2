@@ -11,7 +11,7 @@ import { FiMail } from "@react-icons/all-files/fi/FiMail";
 import { FiCoffee } from "@react-icons/all-files/fi/FiCoffee";
 
 // Files
-import NathanKindaCV from "../files/Kinda's CV.pdf";
+import NathanKindaCV from "../files/Kinda_resume .pdf";
 
 const bioDescription = ``;
 
@@ -125,13 +125,13 @@ const quickActionList = [
     text: "Book a meeting",
     nick: "b",
     icon: <FiCalendar />,
-    target: "mailto:kinda.nathan@icloud.com",
+    target: "mailto:kinda.nathan1@gmail.com",
   },
   {
     text: "Send an email",
     nick: "e",
     icon: <FiMail />,
-    target: "mailto:kinda.nathan@icloud.com",
+    target: "mailto:kinda.nathan1@gmail.com",
   },
   {
     text: "Follow me on instagram",
